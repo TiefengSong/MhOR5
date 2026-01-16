@@ -1,0 +1,137 @@
+MOLINFO STRUCTURE=./EOLConf/step7.pdb
+
+pocketA0: CENTER ATOMS=@back-A95,@sidechain-A95
+pocketA1: CENTER ATOMS=@back-A155,@sidechain-A155
+pocketA2: CENTER ATOMS=@back-A158
+pocketA3: CENTER ATOMS=@back-A159,@sidechain-A159
+pocketA4: CENTER ATOMS=@back-A162,@sidechain-A162
+pocketA5: CENTER ATOMS=@back-A217,@sidechain-A217
+pocketA6: CENTER ATOMS=@back-A384,@sidechain-A384
+pocketA7: CENTER ATOMS=@back-A387,@sidechain-A387
+pocketA: CENTER ATOMS=pocketA0,pocketA1,pocketA2,pocketA3,pocketA4,pocketA5,pocketA6,pocketA7
+
+ligand0: CENTER ATOMS=280838,280840,280842,280843,280844,280845,280846,280847,280848
+dA0: DISTANCE ATOMS=ligand0,pocketA
+
+ligand1: CENTER ATOMS=280862,280864,280866,280867,280868,280869,280870,280871,280872
+dA1: DISTANCE ATOMS=ligand1,pocketA
+
+ligand2: CENTER ATOMS=280886,280888,280890,280891,280892,280893,280894,280895,280896
+dA2: DISTANCE ATOMS=ligand2,pocketA
+
+ligand3: CENTER ATOMS=280910,280912,280914,280915,280916,280917,280918,280919,280920
+dA3: DISTANCE ATOMS=ligand3,pocketA
+
+ligand4: CENTER ATOMS=280934,280936,280938,280939,280940,280941,280942,280943,280944
+dA4: DISTANCE ATOMS=ligand4,pocketA
+
+ligand5: CENTER ATOMS=280958,280960,280962,280963,280964,280965,280966,280967,280968
+dA5: DISTANCE ATOMS=ligand5,pocketA
+
+ligand6: CENTER ATOMS=280982,280984,280986,280987,280988,280989,280990,280991,280992
+dA6: DISTANCE ATOMS=ligand6,pocketA
+
+ligand7: CENTER ATOMS=281006,281008,281010,281011,281012,281013,281014,281015,281016
+dA7: DISTANCE ATOMS=ligand7,pocketA
+
+ligand8: CENTER ATOMS=281030,281032,281034,281035,281036,281037,281038,281039,281040
+dA8: DISTANCE ATOMS=ligand8,pocketA
+
+ligand9: CENTER ATOMS=281054,281056,281058,281059,281060,281061,281062,281063,281064
+dA9: DISTANCE ATOMS=ligand9,pocketA
+
+
+pocketB0: CENTER ATOMS=@back-B95,@sidechain-B95
+pocketB1: CENTER ATOMS=@back-B155,@sidechain-B155
+pocketB2: CENTER ATOMS=@back-B158
+pocketB3: CENTER ATOMS=@back-B159,@sidechain-B159
+pocketB4: CENTER ATOMS=@back-B162,@sidechain-B162
+pocketB5: CENTER ATOMS=@back-B217,@sidechain-B217
+pocketB6: CENTER ATOMS=@back-B384,@sidechain-B384
+pocketB7: CENTER ATOMS=@back-B387,@sidechain-B387
+pocketB: CENTER ATOMS=pocketB0,pocketB1,pocketB2,pocketB3,pocketB4,pocketB5,pocketB6,pocketB7
+
+dB0: DISTANCE ATOMS=ligand0,pocketB
+
+dB1: DISTANCE ATOMS=ligand1,pocketB
+
+dB2: DISTANCE ATOMS=ligand2,pocketB
+
+dB3: DISTANCE ATOMS=ligand3,pocketB
+
+dB4: DISTANCE ATOMS=ligand4,pocketB
+
+dB5: DISTANCE ATOMS=ligand5,pocketB
+
+dB6: DISTANCE ATOMS=ligand6,pocketB
+
+dB7: DISTANCE ATOMS=ligand7,pocketB
+
+dB8: DISTANCE ATOMS=ligand8,pocketB
+
+dB9: DISTANCE ATOMS=ligand9,pocketB
+
+pocketC0: CENTER ATOMS=@back-C95,@sidechain-C95
+pocketC1: CENTER ATOMS=@back-C155,@sidechain-C155
+pocketC2: CENTER ATOMS=@back-C158
+pocketC3: CENTER ATOMS=@back-C159,@sidechain-C159
+pocketC4: CENTER ATOMS=@back-C162,@sidechain-C162
+pocketC5: CENTER ATOMS=@back-C217,@sidechain-C217
+pocketC6: CENTER ATOMS=@back-C384,@sidechain-C384
+pocketC7: CENTER ATOMS=@back-C387,@sidechain-C387
+pocketC: CENTER ATOMS=pocketC0,pocketC1,pocketC2,pocketC3,pocketC4,pocketC5,pocketC6,pocketC7
+
+dC0: DISTANCE ATOMS=ligand0,pocketC
+
+dC1: DISTANCE ATOMS=ligand1,pocketC
+
+dC2: DISTANCE ATOMS=ligand2,pocketC
+
+dC3: DISTANCE ATOMS=ligand3,pocketC
+
+dC4: DISTANCE ATOMS=ligand4,pocketC
+
+dC5: DISTANCE ATOMS=ligand5,pocketC
+
+dC6: DISTANCE ATOMS=ligand6,pocketC
+
+dC7: DISTANCE ATOMS=ligand7,pocketC
+
+dC8: DISTANCE ATOMS=ligand8,pocketC
+
+dC9: DISTANCE ATOMS=ligand9,pocketC
+
+dSC: DISTANCE ATOMS=S4C,S3C
+
+pocketD0: CENTER ATOMS=@back-D95,@sidechain-D95
+pocketD1: CENTER ATOMS=@back-D155,@sidechain-D155
+pocketD2: CENTER ATOMS=@back-D158
+pocketD3: CENTER ATOMS=@back-D159,@sidechain-D159
+pocketD4: CENTER ATOMS=@back-D162,@sidechain-D162
+pocketD5: CENTER ATOMS=@back-D217,@sidechain-D217
+pocketD6: CENTER ATOMS=@back-D384,@sidechain-D384
+pocketD7: CENTER ATOMS=@back-D387,@sidechain-D387
+pocketD: CENTER ATOMS=pocketD0,pocketD1,pocketD2,pocketD3,pocketD4,pocketD5,pocketD6,pocketD7
+
+dD0: DISTANCE ATOMS=ligand0,pocketD
+
+dD1: DISTANCE ATOMS=ligand1,pocketD
+
+dD2: DISTANCE ATOMS=ligand2,pocketD
+
+dD3: DISTANCE ATOMS=ligand3,pocketD
+
+dD4: DISTANCE ATOMS=ligand4,pocketD
+
+dD5: DISTANCE ATOMS=ligand5,pocketD
+
+dD6: DISTANCE ATOMS=ligand6,pocketD
+
+dD7: DISTANCE ATOMS=ligand7,pocketD
+
+dD8: DISTANCE ATOMS=ligand8,pocketD
+
+dD9: DISTANCE ATOMS=ligand9,pocketD
+
+
+PRINT ARG=* STRIDE=1 FILE=d_lp

@@ -1,0 +1,73 @@
+; Run control
+integrator               = md       ; Langevin dynamics
+tinit                    = 0
+dt                       = 0.002
+nsteps                   = 20000000   ;
+; Output control
+nstxout                  = 0
+nstvout                  = 0
+nstfout                  = 0
+nstenergy                = 0
+nstlog                  = 5000000
+nstxout-compressed      = 500000
+compressed-x-precision  = 100
+
+; Neighborsearching and short-range nonbonded interactions
+cutoff-scheme            = verlet
+nstlist                  = 20
+ns_type                  = grid
+pbc                      = xyz
+rlist                    = 1.2
+; Electrostatics
+coulombtype              = PME
+rcoulomb                 = 1.2
+; van der Waals
+vdwtype                  = cutoff
+vdw-modifier             = Force-switch
+rvdw-switch              = 1.0
+rvdw                     = 1.2
+
+; EWALD/PME/PPPM parameters
+pme_order                = 4
+
+; Temperature coupling
+; tcoupl is implicitly handled by the sd integrator
+tcoupl                  = V-rescale
+tc_grps                 = SOLU MEMB SOLV
+tau_t                   = 1.0 1.0 1.0
+ref_t                   = 310 310 310 
+; Pressure coupling is on for NPT
+Pcoupl                   = Parrinello-Rahman 
+pcoupltype              = semiisotropic
+tau_p                   = 5.0 
+compressibility         = 4.5e-5  4.5e-5
+ref_p                   = 1.0     1.0
+refcoord_scaling        = com
+
+; Free energy control stuff
+free_energy              = yes
+init_lambda_state        = 7
+delta_lambda             = 0
+couple-moltype          = MEOL
+couple-lambda0          = vdw-q
+couple-lambda1          = none
+couple-intramol         = no
+calc_lambda_neighbors   = -1
+coul-lambdas            = 0.00 0.05 0.10 0.20 0.30 0.40 0.50 0.60 0.70 0.75 0.80 0.85 0.90 0.95 1.00 1.00 1.00 1.00
+vdw-lambdas             = 0.00 0.00 0.00 0.00 0.05 0.10 0.20 0.30 0.40 0.50 0.60 0.70 0.75 0.80 0.85 0.90 0.95 1.00
+bonded-lambdas          = 0.00 0.05 0.10 0.15 0.20 0.25 0.30 0.35 0.40 0.50 0.60 0.70 0.75 0.80 0.85 0.90 0.95 1.00
+sc-alpha                 = 0.3
+sc-coul                  = yes       ; linear interpolation of Coulomb (none in this case)
+sc-power                 = 1
+sc-sigma                 = 0.25
+nstdhdl                  = 10000
+
+; Do not generate velocities
+gen_vel                  = no 
+; options for bonds
+constraints              = h-bonds  ; we only have C-H bonds here
+; Type of constraint algorithm
+constraint-algorithm     = lincs
+
+continuation = yes
+

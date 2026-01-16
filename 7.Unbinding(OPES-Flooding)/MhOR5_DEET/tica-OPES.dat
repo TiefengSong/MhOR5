@@ -1,0 +1,31 @@
+MOLINFO STRUCTURE=step7.pdb
+ligand: CENTER ATOMS=29233-29246
+pocket0: CENTER ATOMS=@back-A95,@sidechain-A95
+pocket1: CENTER ATOMS=@back-A155,@sidechain-A155
+pocket2: CENTER ATOMS=@back-A158
+pocket3: CENTER ATOMS=@back-A162,@sidechain-A162
+pocket4: CENTER ATOMS=@back-A217,@sidechain-A217
+pocket5: CENTER ATOMS=@back-A384,@sidechain-A384
+pocket6: CENTER ATOMS=@back-A387,@sidechain-A387
+chi1-162: TORSION ATOMS=2424,2426,2428,2431
+chi2-162: TORSION ATOMS=2426,2428,2431,2432
+coschi1-162: CUSTOM ARG=chi1-162 FUNC=cos(x) PERIODIC=NO
+pocket: CENTER ATOMS=pocket0,pocket1,pocket2,pocket3,pocket4,pocket5,pocket6
+dtotal: DISTANCE ATOMS=ligand,pocket
+xx: CUSTOM PERIODIC=NO ARG=dtotal FUNC=step(x-1.6)
+opes: OPES_METAD_EXPLORE ...
+    ARG=coschi1-162,dtotal
+    PACE=500 BARRIER=20
+    STATE_RFILE=STATE
+    STATE_WFILE=STATE
+    FILE=KERNELS
+    EXCLUDED_REGION=xx
+    ...
+COMMITTOR ...
+        ARG=dtotal
+        STRIDE=10000
+        BASIN_LL1=2.4
+        BASIN_UL1=10
+        ...
+
+PRINT ARG=* STRIDE=100000 FILE=OPES-COLVAR

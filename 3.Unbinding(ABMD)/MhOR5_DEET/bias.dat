@@ -1,0 +1,19 @@
+MOLINFO STRUCTURE=step7.pdb
+ligand: CENTER ATOMS=29233-29246
+pocket0: CENTER ATOMS=@back-A95,@sidechain-A95
+pocket1: CENTER ATOMS=@back-A155,@sidechain-A155
+pocket2: CENTER ATOMS=@back-A158
+pocket3: CENTER ATOMS=@back-A162,@sidechain-A162
+pocket4: CENTER ATOMS=@back-A217,@sidechain-A217
+pocket5: CENTER ATOMS=@back-A384,@sidechain-A384
+pocket6: CENTER ATOMS=@back-A387,@sidechain-A387
+pocket: CENTER ATOMS=pocket0,pocket1,pocket2,pocket3,pocket4,pocket5,pocket6
+dtotal: DISTANCE ATOMS=ligand,pocket
+abmd: ABMD ARG=dtotal TO=5.0 KAPPA=24 
+COMMITTOR ...
+        ARG=dtotal
+        STRIDE=50000
+        BASIN_LL1=5
+        BASIN_UL1=10
+	...
+PRINT ARG=* FILE=COLVAR STRIDE=500000

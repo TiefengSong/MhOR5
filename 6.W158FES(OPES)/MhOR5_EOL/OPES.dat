@@ -1,0 +1,23 @@
+MOLINFO STRUCTURE=./Conf/step7.pdb
+ligand: CENTER ATOMS=29237,29239,29241,29242,29243,29244,29245,29246,29247
+pocket0: CENTER ATOMS=@back-A95,@sidechain-A95
+pocket1: CENTER ATOMS=@back-A155,@sidechain-A155
+pocket2: CENTER ATOMS=@back-A158
+pocket3: CENTER ATOMS=@back-A162,@sidechain-A162
+pocket4: CENTER ATOMS=@back-A217,@sidechain-A217
+pocket5: CENTER ATOMS=@back-A384,@sidechain-A384
+pocket6: CENTER ATOMS=@back-A387,@sidechain-A387
+pocket: CENTER ATOMS=pocket0,pocket1,pocket2,pocket3,pocket4,pocket5,pocket6
+torsion_chi1-162: TORSION ATOMS=2424,2426,2428,2431
+torsion_chi2-162: TORSION ATOMS=2426,2428,2431,2432
+dtotal: DISTANCE ATOMS=ligand,pocket
+uwall: UPPER_WALLS ARG=dtotal AT=1.2 KAPPA=150 EXP=2 EPS=1 OFFSET=0
+opes: OPES_METAD ...
+    ARG=torsion_chi1-162,torsion_chi2-162
+    PACE=500 BARRIER=40
+    STATE_RFILE=./OPES/OPES-chi1_4/STATE
+    STATE_WFILE=./OPES/OPES-chi1_4/STATE
+    FILE=./OPES/OPES-chi1_4/KERNELS
+    ...
+
+PRINT ARG=* STRIDE=100000 FILE=./OPES-COLVAR
